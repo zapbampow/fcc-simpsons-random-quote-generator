@@ -1,0 +1,44 @@
+/*#quote
+
+#name
+
+.bg-color*/
+
+body{
+  background-image: url("https://www.dropbox.com/s/7694odmpqb1dt6f/family.jpg?raw=1");
+  color: #3a9983;
+  background-size: 100%;
+}
+
+.box-color{
+  background-color: #fff;
+}
+
+.single-color{
+  color: #3a9983;
+}
+
+.single-color:hover{
+  color: #46b89d;
+}
+
+.btn-single-color{
+  color: #fff;
+  background-color: #3a9983;
+  border-color: #3a9983;
+  
+}
+
+.btn-single-color:hover{
+  color: #fff;
+  background-color: #46b89d;
+  border-color: #46b89d;
+}
+
+.all-white p, a, a:hover{
+  color: white;
+}
+
+.btn {
+ cursor: pointer;
+}
