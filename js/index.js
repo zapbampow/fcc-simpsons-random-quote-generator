@@ -14,7 +14,7 @@ var quotes = [
 		  "Now we play the waiting game…Ahh, the waiting game sucks. Let’s play Hungry Hungry Hippos!"
 	],
 	person: "- Homer Simpson",
-	img: "https://www.dropbox.com/s/2opyai46d2rks0l/homer.png?raw=1",
+	img: "images/homer.png",
 	color: "#a1be26",
 	colorHover: "#11ecf5",
 	},
@@ -30,7 +30,7 @@ var quotes = [
 		"The Tooth Fairy’s made a donation in my name to the United Way. That gossamer witch!"
 	],
 	person: "- Bart Simpson",
-	img: "https://www.dropbox.com/s/b78ci24u0hfvq77/bart.png?raw=1",
+	img: "images/bart.png",
 	color: "#fb0101",
 	colorHover: "#eb0101",
 	},
@@ -40,11 +40,11 @@ var quotes = [
 		"All the years I’ve wanted to be treated like an adult have blown up in my face."
 	],
 	person: "- Lisa Simpson",
-	img: "https://www.planetclaire.tv/wp-content/uploads/2015/04/the-simpsons-lisa-simpson.jpg",
+	img: "images/lisa.jpg",
 	color: "#ffafcc",
 	colorHover: "#f2a6c2",
 	},
-	
+
 	{quote: [
 		"This family has had its differences and we’ve squabbled, but we’ve never had knife fights before. And I blame this house.",
 		"I guess one person can make a difference. But most of the time, they probably shouldn’t.",
@@ -53,11 +53,11 @@ var quotes = [
 		"Listen to your mother, kids. Aim low. Aim so low no one will even care if you succeed. Dinner’s in the oven. If you want some butter it’s under my face."
 	],
 	person: "- Marge Simpson",
-	img: "https://www.dropbox.com/s/utt3cdwpvf2nowi/marge.png?raw=1",
+	img: "images/marge.png",
 	color: "#f15f30",
 	colorHover: "#f06b41",
 	},
-	
+
 	{quote: [
 		"I’d rather let a thousand guilty men go free than chase after them.",
 		"Boy, I tell ya, they only come out at night. Or in this case, the daytime.",
@@ -67,22 +67,22 @@ var quotes = [
 		"If he was going to commit a crime, would he have invited the number one cop in town? Now where did I put my gun? Oh yeah, I set it down when I got a piece of cake."
 	],
 	person: "- Chief Wiggum",
-	img: "https://www.dropbox.com/s/tb44pp0jv36ayi1/chief.jpg?raw=1",
+	img: "images/chief.jpg",
 	color: "#77bb47",
 	colorHover: "#82cc4d",
 	},
-	
+
 	{quote: [
 		"But look! I got some cool pogs: Alf pogs! Remember Alf? He’s back…in pog form!",
 		"Remember the time he ate my goldfish, and you lied to me and said I never had any goldfish. Then why’d I have the bowl, Bart? Why did I have the bowl?",
 		"We started out like Romeo and Juliet, but it ended up in tragedy."
 	],
 	person: "- Milhouse Van Houten",
-	img: "https://www.dropbox.com/s/bhi0m56or8ybbqy/milhouse.jpg?raw=1",
+	img: "images/milhouse.jpg",
 	color: "#0c72b0",
 	colorHover: "#0d7fc4",
 	},
-	
+
 	{quote: [
 		"It tastes like…burning.",
 		"Chocolate microscopes?",
@@ -94,22 +94,22 @@ var quotes = [
 		"This is my sandbox, I'm not allowed to go in the deep end."
 	],
 	person: "- Ralph Wiggum",
-	img: "https://www.dropbox.com/s/nnwybpr6tylagtj/ralph.jpg?raw=1",
+	img: "images/ralph.jpg",
 	color: "#335356",
 	colorHover: "#3c6266",
 	},
-	
+
 	{quote: [
 		" I used to be with it, but then they changed what “it” was, and now what I’m with isn’t it. And what’s “it” seems weird and scary to me.",
 		"I’m filled with piss and vinegar! At first, I was just filled with vinegar.",
 		"Homer, you’re as dumb as a mule and twice as ugly. If a strange man offers you a ride, I say take it!"
 	],
 	person: "- Grampa Simpson",
-	img: "https://www.dropbox.com/s/2gtwdoj3vray5k1/grampa.jpg?raw=1",
+	img: "images/grampa.jpg",
 	color: "#fcbea7",
 	colorHover: "#f2b7a1",
 	},
-	
+
 	{quote: [
 		"Feels like I’m wearing nothing at all…nothing at all…nothing at all!",
 		"I hold here a contract between myself and one Homer Simpson, pledging me his soul for a doughnut, which I delivered. And it was scrum-diddly-umptious!",
@@ -117,7 +117,7 @@ var quotes = [
 		"Ho ho ho, you betcha. Team sports will keep you away from temptations like rock music and girls."
 	],
 	person: "- Ned Flanders",
-	img: "https://www.dropbox.com/s/npq7mv7on7zeho7/flanders.jpg?raw=1",
+	img: "images/flanders.jpg",
 	color: "#b3cb7d",
 	colorHover: "#abc277",
 	}
@@ -147,20 +147,20 @@ var quotes = [
 	  function colorFunc(arr) {
 		  return arr[pnum].color;
 	  }
-	  
+
 	  function colorHoverFunc(arr) {
 		  return arr[pnum].colorHover;
 	  }
-	 
+
 
       var pnum = randomPersonNum(quotes);
       var qnum = randomQuoteNum(quotes);
       var aQuote;
       var aPerson;
       var aQuoteAPerson;
-      
- 
- 
+
+
+
 //Load a quote and the person once page has loaded
 $("#quote").html(function(){
 	aQuote = theQuote(quotes, pnum);
@@ -181,24 +181,24 @@ $("#thebutton").on("click", function(){
       pnum = randomPersonNum(quotes);
       qnum = randomQuoteNum(quotes);
 	$("body").css({
-		"background-image":function(){return "url(\"" + fimg(quotes); + ")"}, 
+		"background-image":function(){return "url(\"" + fimg(quotes); + ")"},
 		"background-color":function(){return colorFunc(quotes);},
 		"color":function(){return colorFunc(quotes);}
 	});
-	
+
 	$(".single-color").css("color", function(){
 		return colorFunc(quotes);
 		});
-	
+
 	$(".single-color:hover").css("color", function(){
 		return colorHoverFunc(quotes);
 		});
-	
+
 	$(".btn-single-color").css({
-		"background-color":function(){return colorFunc(quotes);}, 
+		"background-color":function(){return colorFunc(quotes);},
 		"border-color":function(){return colorFunc(quotes);}
 		});
-	
+
   $("#quote").html(function(){
     aQuote = theQuote(quotes, pnum);
     return aQuote;
